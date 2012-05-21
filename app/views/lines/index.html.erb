@@ -5,10 +5,9 @@
 <ol>
 <% @lines.each do |line| %>
 	<li>
-		<a href ="<%= individual_train_url(line.name) %>">
-			<%= line.name %>
-		</a>
+		<%= link_to line.name, individual_train_url(line.id) %>
 		<%= line.frequency %>
+		<%= link_to 'Edit the Line', edit_train_line_url(line.id) %>
 	</li>
 <% end %>
 </ol>

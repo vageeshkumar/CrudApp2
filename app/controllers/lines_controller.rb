@@ -8,6 +8,10 @@ class LinesController < ApplicationController
     @line = TrainLine.new
   end
   
+  def edit
+    @line = TrainLine.find_by_id(params[:id])    
+  end
+  
   def create
     @new_line = TrainLine.new
     @new_line.name = params[:train_line][:name]
@@ -21,7 +25,7 @@ class LinesController < ApplicationController
   end
   
   def individual
-    @line = TrainLine.find_by_name(params[:id])
+    @line = TrainLine.find_by_id(params[:id])
   end
   
 end
