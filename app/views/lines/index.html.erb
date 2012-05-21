@@ -1,0 +1,21 @@
+<h1>Available Train Lines</h1>
+
+<%= link_to "Add a new train line", new_train_line_url %>
+
+<ol>
+<% @lines.each do |line| %>
+	<li>
+		<a href ="<%= individual_train_url(line.name) %>">
+			<%= line.name %>
+		</a>
+		<%= line.frequency %>
+	</li>
+<% end %>
+</ol>
+
+<a href = "http://localhost:3000/couple">
+	Click here if you're a married man!!
+</a>
+
+
+		
