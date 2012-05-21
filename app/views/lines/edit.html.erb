@@ -1,9 +1,3 @@
 <h1>Edit the <%= @line.name %> Line</h1>
 
-<%= form_for @line do |line| %>
-	Name of the line: <%= line.text_field :name %>
-	<BR>
-	Frequency of the line: <%= line.text_field :frequency %>
-	
-	<%= line.submit %>
-<% end  %>
+<%= render "form" %>

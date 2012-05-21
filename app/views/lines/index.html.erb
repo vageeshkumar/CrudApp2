@@ -7,7 +7,8 @@
 	<li>
 		<%= link_to line.name, individual_train_url(line.id) %>
 		<%= line.frequency %>
-		<%= link_to 'Edit the Line', edit_train_line_url(line.id) %>
+		<%= link_to 'Edit', edit_train_line_url(line.id) %>
+		| <%= link_to 'Delete', individual_train_url(line.id), :method => :delete, :confirm => "Are you sure?" %>
 	</li>
 <% end %>
 </ol>

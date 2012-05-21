@@ -1,0 +1,7 @@
+<%= form_for @line do |line| %>
+	Name of the line: <%= line.text_field :name %>
+	<BR>
+	Frequency of the line: <%= line.text_field :frequency %>
+	
+	<%= line.submit %>
+<% end  %>
